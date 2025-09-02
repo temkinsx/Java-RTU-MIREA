@@ -6,7 +6,7 @@ public abstract class Vehicle {
     private String license;
     private String ownerName;
     private String insuranceNumber;
-    private String engineType;
+    protected String engineType;
     private int year;
 
     public Vehicle(String model, String license, String color, int year, String ownerName, String insuranceNumber, String engineType) {

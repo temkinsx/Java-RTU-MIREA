@@ -30,7 +30,7 @@ public class TestCar {
         spectre.setOwnerName("Sergey Sergeev");
         spectre.setInsuranceNumber("INS00001");
 
-        ((ElectricCar) spectre).setBatteryCapacity(120); // апгрейд батареи
+        ((ElectricCar) spectre).setBatteryCapacity(120);
 
         System.out.println(passat);
         System.out.println("\n");

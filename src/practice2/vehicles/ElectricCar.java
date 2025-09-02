@@ -1,25 +1,26 @@
 package practice2.vehicles;
 
-public class ElectricCar extends practice2.vehicles.Car {
+public class ElectricCar extends Car {
     private int batteryCapacity;
-    protected String engineType = "Electric";
 
-    public ElectricCar(String model, String license, String color, int year, String ownerName, String insuranceNumber, int batteryCapacity) {
+    public ElectricCar(String model, String license, String color, int year,
+                       String ownerName, String insuranceNumber, int batteryCapacity) {
         super(model, license, color, year, ownerName, insuranceNumber, "");
 
-        setEngineType("Electric");
+        this.engineType = "Electric";
         this.batteryCapacity = batteryCapacity;
     }
 
-    public int getBatteryCapacity(){
+    public int getBatteryCapacity() {
         return batteryCapacity;
     }
-    public void setBatteryCapacity(int batteryCapacity){
+
+    public void setBatteryCapacity(int batteryCapacity) {
         this.batteryCapacity = batteryCapacity;
     }
 
     @Override
-    String vehicleType(){
+    public String vehicleType() {
         return "Electric Car";
     }
 
