@@ -28,6 +28,38 @@
 2. Убедись, что выбран JDK (рекомендуется 17+): **File → Project Structure → Project SDK**.
 3. Запусти любой класс с `public static void main(...)` (например, `TestTriangle`/`TestCompare`) через зелёный ▶.
 
+### В Visual Studio Code
+1. Установи расширения:
+    - [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
+    - (опционально) [Debugger for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-debug)
+
+2. Убедись, что JDK установлен и прописан в `PATH` (проверь командой `java -version`).
+
+3. Открой папку репозитория в VS Code (**File → Open Folder…**).
+
+4. Настрой рабочую папку:
+    - В `src` должны лежать все пакеты (`practice1`, `practice2`, …).
+    - VS Code автоматически распознает `src` как *Sources Root*.  
+      Если нет → открой `.vscode/settings.json` и добавь:
+      ```json
+      {
+        "java.project.sourcePaths": ["src"]
+      }
+      ```
+
+5. Запуск:
+    - Открой любой класс с методом `public static void main(String[] args)`.
+    - Вверху над методом появится кнопка **Run | Debug**.
+    - Нажми **Run** для запуска программы.
+
+6. Запуск через терминал:
+   ```bash
+   # компиляция
+   javac -d out $(find src -name "*.java")
+   # запуск (пример для practice4.app.TestTriangle)
+   java -cp out practice4.app.TestTriangle
+   
+
 ### Через терминал (macOS/Linux)
 ```bash
 # из корня репозитория
