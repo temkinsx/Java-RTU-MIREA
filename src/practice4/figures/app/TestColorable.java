@@ -24,7 +24,7 @@ public class TestColorable {
             if (fig instanceof Colorable){
                 ((Colorable) fig).howToColor();
             }
-            System.out.print("\n" );
+            System.out.print("\n");
         }
     }
 
