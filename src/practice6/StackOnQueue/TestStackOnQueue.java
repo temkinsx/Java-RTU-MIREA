@@ -1,0 +1,21 @@
+package practice6.StackOnQueue;
+
+import java.util.Stack;
+
+public class TestStackOnQueue {
+    public static void main(String[] args) {
+        StackOnQueue<Integer> myStack = new StackOnQueue<>();
+
+        myStack.push(39);
+        myStack.push(67);
+
+        System.out.println(myStack);
+
+        System.out.println(myStack.top());
+
+        myStack.pop();
+
+        System.out.println("Стек пуст? " + myStack.empty());
+        System.out.println(myStack);
+    }
+}
