@@ -1,7 +1,5 @@
 package practice6.StackOnQueue;
 
-import java.util.Stack;
-
 public class TestStackOnQueue {
     public static void main(String[] args) {
         StackOnQueue<Integer> myStack = new StackOnQueue<>();

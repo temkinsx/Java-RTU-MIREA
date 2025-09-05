@@ -74,7 +74,7 @@ abstract public class DeliveryService {
         this.deliveryName = deliveryName;
     }
 
-    //можно сделать public - тогда System.out.println(pizzdaDelivery.deliver());
+    //можно сделать public - тогда System.out.println(pizzaDelivery.deliver());
     private String deliver() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
         StringBuilder sb = new StringBuilder(deliveryName);
