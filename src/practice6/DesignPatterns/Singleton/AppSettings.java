@@ -5,20 +5,25 @@ package practice6.DesignPatterns.Singleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class AppSettings {
-    private static AppSettings instance;
-    private final Map<String, String> settings;
+    private static volatile AppSettings instance;
+    private final Map<String, String> settings = new ConcurrentHashMap<>();
 
-    private AppSettings() {
-        settings = new HashMap<>();
-    }
+    private AppSettings() {}
 
     public static AppSettings getInstance() {
-        if (instance == null) {
-            instance = new AppSettings();
+        AppSettings result = instance;
+        if (result == null) {
+            synchronized (AppSettings.class) {
+                result = instance;
+                if (result == null) {
+                    instance = result = new AppSettings();
+                }
+            }
         }
-        return instance;
+        return result;
     }
 
     public String getSetting(String settingName) {
