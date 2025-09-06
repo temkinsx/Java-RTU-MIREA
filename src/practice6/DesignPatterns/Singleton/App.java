@@ -1,6 +1,6 @@
 package practice6.DesignPatterns.Singleton;
 
-public class Test {
+public class App {
     public static void main(String[] args) throws InterruptedException {
         AppSettings settings = AppSettings.getInstance();
 

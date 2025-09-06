@@ -2,7 +2,6 @@
 
 package practice6.DesignPatterns.Singleton;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.concurrent.ConcurrentHashMap;
@@ -11,7 +10,8 @@ public class AppSettings {
     private static volatile AppSettings instance;
     private final Map<String, String> settings = new ConcurrentHashMap<>();
 
-    private AppSettings() {}
+    private AppSettings() {
+    }
 
     public static AppSettings getInstance() {
         AppSettings result = instance;
